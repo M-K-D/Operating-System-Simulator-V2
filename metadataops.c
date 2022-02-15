@@ -425,9 +425,3 @@ bool verifyValidCommand(char *testCmd)
   return false;
 }
 
-OpCodeType *addNode(OpCodeType *localPtr, OpCodeType *newNode);
-int calcOpTime(ConfigDataType *configPtr, OpCodeType *opCode);
-OpCodeType *clearMetaDataList(OpCodeType *localPtr);
-void copyOpCode(OpCodeType *destination, OpCodeType *source);
-OpCodeType *createInitOpCode();
-void displayMetaData(OpCodeType *localPtr);

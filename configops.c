@@ -83,7 +83,7 @@ bool getConfigData(char *fileName, ConfigDataType **configData, char *endStateMs
       return false;
     }
 
-    dataLineCode = getDataLineCode(dataBuffer); // MAybe an issue, databuffer
+    dataLineCode = getDataLineCode(dataBuffer); 
 
     if(dataLineCode != CFG_CORRUPT_PROMPT_ERR)
     {
@@ -151,6 +151,7 @@ bool getConfigData(char *fileName, ConfigDataType **configData, char *endStateMs
         free(tempData);
         fclose(fileAccessPtr);
         copyString(endStateMsg, "Configuration item out of range");
+
         return false; 
       }   
     }
@@ -160,6 +161,7 @@ bool getConfigData(char *fileName, ConfigDataType **configData, char *endStateMs
       free(tempData);
       fclose(fileAccessPtr);
       copyString(endStateMsg, "Corrupted configuration prompt");
+
       return false;
     }
 
@@ -182,7 +184,7 @@ bool getConfigData(char *fileName, ConfigDataType **configData, char *endStateMs
 
   return true;
 }
-// 12:50 configops s6
+
 
 ConfigDataCodes getCpuSchedCode(char *codeStr)
 {

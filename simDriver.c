@@ -113,8 +113,7 @@ int main(int argc, char **argv)
 
       if(runSimFlag)
       {
-        //runSim(configDataPtr, metaDataPtr);
-        runSim();
+        runSim(configDataPtr, metaDataPtr);
       }
     }
 

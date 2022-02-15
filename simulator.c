@@ -2,15 +2,19 @@
 #include "configops.h"
 #include "metadataops.h"
 
-void runSim()
+
+
+void runSim(ConfigDataType *configPtr, OpCodeType *metaDataMstrPtr)
 {
   printf("calling runSim\n");
+
 }
 
-void createPCBs(state, PC, metadata)
+void createPCBs(OpCodeType *metaDataPtr)
 {
+  OpCodeType *tempMdPtr = &metaDataPtr;
   // loop across the metadata
-
+  while(metaDataPtr)
     // Check for app start and okay flag
         // Create pcb node
         // Set data, pid, state
